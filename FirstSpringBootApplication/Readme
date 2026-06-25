@@ -1,0 +1,126 @@
+# 🌱 First Spring Boot Application
+
+This is my first Spring Boot application created using **Spring Tool Suite (STS)** and **Maven**. The project demonstrates the basic setup of a Spring Boot application and how to run it successfully.
+
+## 📌 Technologies Used
+
+- Java 21
+- Spring Boot 3.x
+- Maven
+- Spring Tool Suite (STS)
+- Eclipse IDE
+
+---
+
+## 📂 Project Structure
+
+```
+first-spring-boot-example
+│── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com/tutorialspoint/first_spring_boot_example
+│   │   │       └── FirstSpringBootTest.java
+│   │   └── resources
+│── pom.xml
+└── README.md
+```
+
+---
+
+## 🚀 Features
+
+- Created a Maven-based Spring Boot project.
+- Configured project dependencies using `pom.xml`.
+- Implemented the `@SpringBootApplication` annotation.
+- Executed the application using `SpringApplication.run()`.
+- Verified successful application startup.
+
+---
+
+## 🛠️ Prerequisites
+
+Before running this project, ensure you have:
+
+- Java 21 or later
+- Maven
+- Spring Tool Suite (STS) or IntelliJ IDEA
+- Git
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/first-spring-boot-example.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd first-spring-boot-example
+```
+
+Build the project:
+
+```bash
+mvn clean install
+```
+
+Run the application:
+
+```bash
+mvn spring-boot:run
+```
+
+or
+
+Run the `FirstSpringBootTest.java` class directly from STS/IntelliJ.
+
+---
+
+## 📖 Sample Output
+
+```
+Hello World, this is First Spring Boot Test
+
+:: Spring Boot ::
+
+Started FirstSpringBootTest in 1.2 seconds
+```
+
+---
+
+## 📚 What I Learned
+
+- Spring Boot project structure
+- Maven dependency management
+- `@SpringBootApplication`
+- `SpringApplication.run()`
+- Running Spring Boot applications
+- Using Spring Tool Suite (STS)
+
+---
+
+## 🎯 Next Learning Goals
+
+- Spring Boot REST APIs
+- Spring MVC
+- Spring Data JPA
+- Hibernate
+- MySQL
+- Spring Security
+- JWT Authentication
+- Microservices
+- Docker
+- Kafka
+
+---
+
+## 🤝 Connect With Me
+
+If you have suggestions or feedback, feel free to connect with me on LinkedIn and GitHub.
+
+⭐ If you found this project helpful, consider giving it a star.
