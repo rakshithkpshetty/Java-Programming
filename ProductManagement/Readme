@@ -1,0 +1,80 @@
+# 🚀 Spring Boot REST API - Learning Project
+
+This repository contains my first Spring Boot REST API project developed using **Spring Tool Suite (STS)** and tested using **Postman**.
+
+## 📚 About the Project
+
+This project was created as part of my Spring Boot learning journey. It demonstrates how to create and test REST APIs using Spring Boot.
+
+## 🛠 Technologies Used
+
+- Java 21
+- Spring Boot
+- Spring Tool Suite (STS)
+- Maven
+- Postman
+
+## 📁 Features
+
+- Spring Boot project setup
+- REST Controller
+- GET API
+- POST API
+- PUT API
+- DELETE API
+- JSON Request & Response
+- API Testing using Postman
+
+## 📌 REST Endpoints
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/products` | Get all products |
+| POST | `/products` | Create a product |
+| PUT | `/products/{id}` | Update a product |
+| DELETE | `/products/{id}` | Delete a product |
+
+## ▶️ How to Run
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/product-management.git
+```
+
+2. Open in Spring Tool Suite (STS)
+
+3. Run the application
+
+4. Open Postman and test APIs
+
+Base URL
+
+```
+http://localhost:8080
+```
+
+## 📖 What I Learned
+
+- Spring Boot fundamentals
+- Maven project structure
+- REST APIs
+- Controller Layer
+- HTTP Methods (GET, POST, PUT, DELETE)
+- API Testing using Postman
+
+## 🎯 Next Steps
+
+- Spring Data JPA
+- MySQL
+- Hibernate
+- Validation
+- Exception Handling
+- Spring Security
+- JWT
+- Docker
+- Microservices
+
+---
+
+⭐ This project is part of my Java Backend Development learning journey.
