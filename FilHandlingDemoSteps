@@ -1,0 +1,92 @@
+# 📂 Spring Boot File Upload & Download API
+
+A beginner-friendly Spring Boot project demonstrating file upload and download using REST APIs.
+
+## 🚀 Technologies Used
+
+- Java 21
+- Spring Boot
+- Maven
+- Spring Tool Suite (STS)
+- Postman
+
+---
+
+## 📋 Steps Performed
+
+### Step 1: Created a Spring Boot Project
+- Opened Spring Tool Suite (STS)
+- Created a new Spring Starter Project
+- Added the Spring Web dependency
+
+### Step 2: Created the Controller
+- Created `FileController.java`
+- Added REST endpoints using `@RestController`
+
+### Step 3: Implemented File Upload API
+- Used `@PostMapping("/upload")`
+- Accepted file using `MultipartFile`
+- Saved the uploaded file using `FileOutputStream`
+- Stored files in `C:\uploads`
+
+### Step 4: Implemented File Download API
+- Used `@GetMapping("/download")`
+- Read the file using `FileInputStream`
+- Returned the file using `InputStreamResource`
+- Added HTTP headers using `HttpHeaders`
+
+### Step 5: Tested APIs with Postman
+
+#### Upload API
+
+POST
+
+```
+http://localhost:8080/upload
+```
+
+Body → form-data
+
+Key: `file`
+
+Type: File
+
+#### Download API
+
+GET
+
+```
+http://localhost:8080/download
+```
+
+---
+
+## 📚 Concepts Covered
+
+- Spring Boot REST APIs
+- MultipartFile
+- File Upload
+- File Download
+- ResponseEntity
+- HttpHeaders
+- MediaType
+- FileInputStream
+- FileOutputStream
+- Postman API Testing
+
+---
+
+## 🎯 Learning Outcome
+
+Through this project, I learned how to:
+
+- Build REST APIs using Spring Boot
+- Upload files from a client to the server
+- Store uploaded files on the local file system
+- Download files from the server
+- Test REST APIs using Postman
+- Work with HTTP headers and media types
+
+---
+
+⭐ This project is part of my Spring Boot learning journey toward becoming a Java Backend Developer.
