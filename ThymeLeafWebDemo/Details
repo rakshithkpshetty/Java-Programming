@@ -1,0 +1,165 @@
+# 🌿 Spring Boot Thymeleaf Web Application
+
+This project demonstrates how to build a simple web application using **Spring Boot** and **Thymeleaf**. It explains how to serve HTML pages, apply CSS styling, and render web pages using Spring MVC.
+
+## 🚀 Technologies Used
+
+- Java 21
+- Spring Boot
+- Spring MVC
+- Thymeleaf
+- Maven
+- Spring Tool Suite (STS)
+- HTML5
+- CSS3
+
+---
+
+## 📋 Steps Performed
+
+### Step 1: Created a Spring Boot Project
+
+- Opened Spring Tool Suite (STS)
+- Created a Spring Starter Project
+- Selected Maven as the build tool
+- Chose Java 21
+
+---
+
+### Step 2: Added Required Dependencies
+
+Added the following dependencies:
+
+- Spring Web
+- Spring Boot Starter Thymeleaf
+
+---
+
+### Step 3: Created the Controller
+
+Created a `WebController` class.
+
+Used:
+
+- `@Controller`
+- `@GetMapping`
+
+to map the URL `/index`.
+
+---
+
+### Step 4: Created the Templates Folder
+
+Created
+
+```
+src/main/resources/templates
+```
+
+Added
+
+```
+index.html
+```
+
+---
+
+### Step 5: Designed the HTML Page
+
+Created a simple HTML page to display:
+
+```
+Welcome to Spring Boot with Thymeleaf
+```
+
+---
+
+### Step 6: Added CSS Styling
+
+Created
+
+```
+src/main/resources/static/css/style.css
+```
+
+Applied styling to the page.
+
+---
+
+### Step 7: Connected HTML with CSS
+
+Linked the stylesheet using
+
+```html
+<link rel="stylesheet" href="/css/style.css">
+```
+
+---
+
+### Step 8: Ran the Application
+
+Started the application using
+
+```
+Run As → Spring Boot App
+```
+
+Verified Tomcat started successfully on port **8080**.
+
+---
+
+### Step 9: Tested in Browser
+
+Opened
+
+```
+http://localhost:8080/index
+```
+
+Verified that the Thymeleaf page rendered successfully.
+
+---
+
+## 📂 Project Structure
+
+```
+src
+└── main
+    ├── java
+    │    └── controller
+    │         └── WebController.java
+    │
+    └── resources
+         ├── templates
+         │      index.html
+         │
+         ├── static
+         │      └── css
+         │             style.css
+         │
+         └── application.properties
+```
+
+---
+
+## 📚 Concepts Learned
+
+- Spring Boot MVC
+- Thymeleaf Template Engine
+- @Controller
+- @GetMapping
+- HTML
+- CSS
+- Static Resources
+- Templates Folder
+- Request Mapping
+
+---
+
+## 🎯 Learning Outcome
+
+Through this project, I learned how Spring Boot integrates with Thymeleaf to build dynamic web applications and how HTML pages are rendered through Spring MVC.
+
+---
+
+⭐ This project is part of my Java Backend Development learning journey.
