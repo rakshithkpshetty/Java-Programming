@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CORS Demo</title>
+</head>
+<body>
+
+<h2>Employee Details</h2>
+
+<button onclick="loadData()">Load Employees</button>
+
+<p id="result"></p>
+
+<script>
+
+function loadData(){
+
+fetch("http://localhost:8081/employees")
+
+.then(response => response.text())
+
+.then(data => {
+
+document.getElementById("result").innerHTML=data;
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

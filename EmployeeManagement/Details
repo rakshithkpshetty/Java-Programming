@@ -1,0 +1,97 @@
+Steps Performed – Implementing CORS in Spring Boot
+Step 1: Created a Spring Boot Project
+Opened Spring Tool Suite (STS).
+Created a new Spring Boot project using Spring Initializr.
+Added the required dependency:
+Spring Web
+Step 2: Created a REST Controller
+Created a package named controller.
+Created a class named ProductController.
+Added the @RestController annotation.
+Created a REST API using the @GetMapping("/products") annotation.
+Step 3: Enabled CORS at the Controller Level
+Added the @CrossOrigin annotation above the API method.
+
+Configured the allowed origin as:
+
+@CrossOrigin(origins = "http://localhost:8080")
+This allowed only requests coming from http://localhost:8080.
+Step 4: Ran the Spring Boot Application
+Started the Spring Boot application.
+Verified that the embedded Tomcat server started successfully.
+
+The application was accessible on:
+
+http://localhost:9090
+Step 5: Tested the REST API
+Opened Postman.
+
+Sent a GET request to:
+
+http://localhost:9090/products
+
+Received the response:
+
+Product List
+Step 6: Verified Cross-Origin Access
+
+Accessed the REST API from a frontend running on:
+
+http://localhost:8080
+Confirmed that the request was allowed because the origin matched the value specified in the @CrossOrigin annotation.
+Global CORS Configuration
+Step 7: Configured CORS Globally
+Opened the main Spring Boot application class (DemoApplication.java).
+Created a WebMvcConfigurer bean.
+Overrode the addCorsMappings() method.
+
+Configured CORS globally using:
+
+registry.addMapping("/products")
+        .allowedOrigins("http://localhost:8080");
+Step 8: Applied CORS to All APIs
+
+Updated the mapping:
+
+registry.addMapping("/**")
+This enabled CORS support for all REST endpoints in the application.
+Step 9: Allowed Multiple Origins
+
+Configured multiple frontend applications to access the backend:
+
+.allowedOrigins(
+    "http://localhost:8080",
+    "http://localhost:3000"
+)
+Step 10: Allowed HTTP Methods
+
+Configured the supported HTTP methods:
+
+.allowedMethods(
+    "GET",
+    "POST",
+    "PUT",
+    "DELETE"
+)
+Step 11: Allowed Request Headers
+
+Configured the application to accept all request headers:
+
+.allowedHeaders("*")
+Step 12: Tested the Application
+Restarted the Spring Boot application.
+Verified that the frontend could successfully communicate with the backend without any CORS errors.
+Confirmed the APIs were working correctly using both a web application and Postman.
+Request Flow
+Frontend (React/Angular)
+        │
+        │ HTTP Request
+        ▼
+Spring Boot REST API
+        │
+        │ CORS Validation
+        ▼
+Controller
+        │
+        ▼
+Response Returned to Frontend
