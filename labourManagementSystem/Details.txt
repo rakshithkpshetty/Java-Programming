@@ -1,0 +1,288 @@
+Spring Boot Simple Employee Management Project – Steps Performed
+Phase 1: Software Installation
+Step 1
+
+Installed Java JDK 21.
+
+Verified installation:
+
+java -version
+Step 2
+
+Installed Apache Maven.
+
+Verified installation:
+
+mvn -version
+Step 3
+
+Installed Spring Tool Suite (STS).
+
+Step 4
+
+Installed MySQL Server and MySQL Workbench.
+
+Phase 2: Database Creation
+Step 1
+
+Opened MySQL Workbench.
+
+Step 2
+
+Created a new database.
+
+CREATE DATABASE employee_db;
+Step 3
+
+Verified the database.
+
+SHOW DATABASES;
+Phase 3: Create Spring Boot Project
+Step 1
+
+Opened STS.
+
+File
+   ↓
+New
+   ↓
+Spring Starter Project
+Step 2
+
+Entered project details.
+
+Project Name : EmployeeManagement
+
+Group : com.company
+
+Artifact : employee
+
+Package : com.company
+
+Packaging : Jar
+
+Java Version : 21
+Step 3
+
+Selected dependencies.
+
+Spring Web
+Spring Data JPA
+MySQL Driver
+Lombok
+Step 4
+
+Clicked Finish.
+
+Maven downloaded all required dependencies.
+
+Phase 4: Configure Database
+
+Opened
+
+src/main/resources/application.properties
+
+Added:
+
+spring.datasource.url=jdbc:mysql://localhost:3306/employee_db
+spring.datasource.username=root
+spring.datasource.password=your_password
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+server.port=8080
+
+Saved the file.
+
+Phase 5: Create Package Structure
+
+Created the following packages under:
+
+src/main/java/com/company
+controller
+
+service
+
+repository
+
+entity
+Phase 6: Create Entity Class
+
+Created
+
+Employee.java
+
+inside
+
+entity
+
+Added fields:
+
+id
+
+name
+
+email
+
+department
+
+Added annotations:
+
+@Entity
+
+@Table
+
+@Id
+
+@GeneratedValue
+
+Generated constructors.
+
+Generated getters and setters.
+
+Phase 7: Create Repository
+
+Created interface
+
+EmployeeRepository
+
+Extended
+
+JpaRepository<Employee, Long>
+Phase 8: Create Service
+
+Created class
+
+EmployeeService
+
+Injected repository using
+
+@Autowired
+
+Created method
+
+getEmployees()
+
+Used
+
+repository.findAll();
+
+to fetch all employees.
+
+Phase 9: Create Controller
+
+Created class
+
+EmployeeController
+
+Added annotations
+
+@RestController
+
+@RequestMapping("/employees")
+
+Injected service.
+
+Created API
+
+@GetMapping
+
+Returned
+
+service.getEmployees();
+Phase 10: Run Spring Boot Application
+
+Opened
+
+EmployeeManagementApplication.java
+
+Right Click
+
+Run As
+
+↓
+
+Spring Boot App
+
+Console displayed
+
+Tomcat started on port(s): 8080
+
+Started EmployeeManagementApplication
+Phase 11: Verify Table Creation
+
+Opened MySQL Workbench.
+
+Executed
+
+USE employee_db;
+
+SHOW TABLES;
+
+Verified table
+
+employees
+
+Checked columns
+
+DESC employees;
+Phase 12: Test API
+
+Opened Postman.
+
+Selected
+
+GET
+
+Entered URL
+
+http://localhost:8080/employees
+
+Clicked
+
+Send
+
+Received response
+
+[]
+
+because the database was empty.
+
+Request Flow
+Client (Postman)
+
+        ↓
+
+EmployeeController
+
+        ↓
+
+EmployeeService
+
+        ↓
+
+EmployeeRepository
+
+        ↓
+
+MySQL Database
+Project Structure
+EmployeeManagement
+│
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com.company
+│   │   │       ├── controller
+│   │   │       ├── service
+│   │   │       ├── repository
+│   │   │       ├── entity
+│   │   │       └── EmployeeManagementApplication.java
+│   │   │
+│   │   └── resources
+│   │       └── application.properties
+│
+├── pom.xml
+
+This is a clean Day 1 Spring Boot documentation. After this, your next document can be Day 2: Implement CRUD (POST, PUT, DELETE), followed by Day 3: React Integration, and finally Day 4: AWS Deployment.
